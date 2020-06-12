@@ -1,29 +1,42 @@
 <template>
+    <b-container class="bv-example-row">
+        <b-row align-v="center">
+            <b-form >
+                <b-form-group
+                    id="input-group-1"
+                    label="Email address:"
+                    label-for="input-1"
+                    description="We'll never share your email with anyone else."
+                >
+                    <b-form-input
+                        id="input-1"
+                        v-model="user.email"
+                        type="email"
+                        required
+                        placeholder="Enter email"
+                    ></b-form-input>
+                </b-form-group>      
 
-    <div class="login">
-        <md-card class="md-layout-item md-size-50 md-small-size-100">
-            <md-card-header>
-                <div class="md-title">Login</div>
-            </md-card-header>
-            <md-card-content>
-                <div class="md-layout md-gutter">
-                    <div class="md-layout-item md-small-size-100">
-                        <md-field >
-                            <label for="last-name">Email</label>
-                            <md-input name="last-name" id="last-name" autocomplete="family-name" v-model="user.email"/>
-                        </md-field>
-                        <md-field >
-                            <label for="last-name">Senha</label>
-                            <md-input name="last-name" id="last-name" autocomplete="family-name" v-model="user.password"/>
-                        </md-field>
-                        <md-field >
-                            <md-button class="md-primary" @click="login">Login</md-button>
-                        </md-field>
-                    </div>          
-                </div>
-            </md-card-content>
-        </md-card>                
-    </div>
+                <b-form-group
+                    id="input-group-1"
+                    label="Email address:"
+                    label-for="input-1"
+                    description="We'll never share your email with anyone else."
+                >
+                    <b-form-input
+                        id="input-1"
+                        v-model="user.password"
+                        type="email"
+                        required
+                        placeholder="Enter email"
+                    ></b-form-input>
+                </b-form-group>                  
+
+                <b-button type="submit" variant="success" @click="login">Login</b-button>
+                <b-button type="reset" variant="primary" >Cadastre-se</b-button>
+            </b-form>
+        </b-row>
+    </b-container>
 </template>
 
 <script>
