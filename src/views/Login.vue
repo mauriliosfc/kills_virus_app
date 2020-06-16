@@ -1,12 +1,11 @@
 <template>
     <b-container class="bv-example-row">
-        <b-row align-v="center">
+        <b-row align-v="center" class="justify-content-md-center">
             <b-form >
                 <b-form-group
                     id="input-group-1"
-                    label="Email address:"
-                    label-for="input-1"
-                    description="We'll never share your email with anyone else."
+                    label="Email"
+                    label-for="input-1"                    
                 >
                     <b-form-input
                         id="input-1"
@@ -19,21 +18,20 @@
 
                 <b-form-group
                     id="input-group-1"
-                    label="Email address:"
-                    label-for="input-1"
-                    description="We'll never share your email with anyone else."
+                    label="Senha"
+                    label-for="input-1"                    
                 >
                     <b-form-input
                         id="input-1"
                         v-model="user.password"
-                        type="email"
+                        type="password"
                         required
-                        placeholder="Enter email"
+                        placeholder="Senha"
                     ></b-form-input>
                 </b-form-group>                  
 
-                <b-button type="submit" variant="success" @click="login">Login</b-button>
-                <b-button type="reset" variant="primary" >Cadastre-se</b-button>
+                <b-button block variant="success" @click="login">Login</b-button>
+                <b-button block variant="primary" href="/registrar">Cadastre-se</b-button>
             </b-form>
         </b-row>
     </b-container>
@@ -59,6 +57,7 @@ export default {
                     this.$router.replace("home")
                 })
                 .catch(error => {
+                    alert('Usuário ou senha incorretos')
                     console.log(error)
                 })            
         }

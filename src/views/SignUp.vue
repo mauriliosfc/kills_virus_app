@@ -1,16 +1,52 @@
 <template>
-    <div class="login">
-        <h1>Login</h1>
-        <input type="text" placeholder="Nome" v-model="user.username">
-        <br>
-        <input type="text" placeholder="Email" v-model="user.email">
-        <br>
-        <input type="text" placeholder="Senha" v-model="user.password">
-        <br>
-        <div class="btn-login">
-            <button @click="registrar">Registrar</button>
-        </div>        
-    </div>
+    <b-container class="bv-example-row">
+        <b-row align-v="center" class="justify-content-md-center">
+            <b-form >
+                <b-form-group
+                    id="input-group-1"
+                    label="Nome"
+                    label-for="input-1"                    
+                >
+                    <b-form-input
+                        id="input-1"
+                        v-model="user.username"
+                        type="text"
+                        required
+                        placeholder="Nome"
+                    ></b-form-input>
+                </b-form-group>      
+                <b-form-group
+                    id="input-group-1"
+                    label="Email"
+                    label-for="input-1"                    
+                >
+                    <b-form-input
+                        id="input-1"
+                        v-model="user.email"
+                        type="email"
+                        required
+                        placeholder="Enter email"
+                    ></b-form-input>
+                </b-form-group>      
+
+                <b-form-group
+                    id="input-group-1"
+                    label="Senha"
+                    label-for="input-1"                    
+                >
+                    <b-form-input
+                        id="input-1"
+                        v-model="user.password"
+                        type="password"
+                        required
+                        placeholder="Senha"
+                    ></b-form-input>
+                </b-form-group>                  
+
+                <b-button block variant="success" @click="registrar()">Registrar</b-button>                
+            </b-form>
+        </b-row>
+    </b-container>   
 </template>
 
 <script>
@@ -25,7 +61,7 @@ export default {
         }
     },
     methods: {
-        registrar(){
+        registrar(){                        
             this.$http.post('/register', this.user)
                 .then( () => {
                     alert("Usuário criado com sucesso!");
