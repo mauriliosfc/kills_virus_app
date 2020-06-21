@@ -1,10 +1,18 @@
 <template>
-  <div id="app">
-    <div id="nav">
-    </div>
+  <div id="app">    
     <router-view/>
+    <router-view :key="$route.fullPath" name="template"/>
   </div>
 </template>
+<script>
+export default {  
+  methods:{
+    session(){
+      return this.$session.exists()
+    }
+  }  
+}
+</script>
 
 <style>
 #app {
