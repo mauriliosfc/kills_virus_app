@@ -18,7 +18,7 @@ export default {
         {
           href: '/app',
           title: 'Home',
-          icon: 'fa fa-user'
+          icon: 'fa fa-home'
         },
         {
           title: 'Shoping',
