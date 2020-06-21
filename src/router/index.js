@@ -5,7 +5,10 @@ import Login from '../views/Login'
 import SignUp from '../views/SignUp'
 import Template from '../components/Template.vue'
 import App from "../components/Home.vue"
-
+import Comprar from '../components/Comprar'
+import Consulta from '../components/Consulta'
+import Testes from '../components/Testes'
+import Vender from '../components/Vender'
 Vue.use(VueRouter)
 
 const routes = [
@@ -35,7 +38,11 @@ const routes = [
       template: Template
     },
     children: [
-      { path: '/app', name: 'adm-home', components: { content: App }}
+      { path: '/app', name: 'adm-home', components: { content: App }},
+      { path: '/comprar', name: 'adm-home', components: { content: Comprar }},
+      { path: '/vender', name: 'adm-home', components: { content: Vender }},
+      { path: '/testes', name: 'adm-home', components: { content: Testes }},
+      { path: '/consulta', name: 'adm-home', components: { content: Consulta }}
     ]
   }
 ]

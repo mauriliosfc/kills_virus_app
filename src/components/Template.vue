@@ -22,7 +22,7 @@ export default {
         },
         {
           title: 'Shoping',
-          icon: 'fa fa-chart-area',
+          icon: 'fa fa-shopping-cart',
           child: [
             {
               href: '/comprar',
@@ -33,7 +33,17 @@ export default {
               title: 'Vender'
             }
           ]
-        }
+        },
+        {
+          href: '/testes',
+          title: 'Testes COVID-19',
+          icon: 'fa fa-syringe'
+        },
+        {
+          href: '/consulta',
+          title: 'Consulta Médica',
+          icon: 'fa fa-briefcase-medical'
+        },
       ]
     }
   },
