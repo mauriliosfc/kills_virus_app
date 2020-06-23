@@ -56,7 +56,7 @@ export default {
                     console.log(res)
                     this.$session.start()
                     this.$session.set('jwt', res.data.token)                                                            
-                    this.$router.replace("home")
+                    this.$router.replace("app")
                 })
                 .catch(error => {
                     alert('Usuário ou senha incorretos')
