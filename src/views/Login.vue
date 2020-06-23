@@ -1,7 +1,9 @@
 <template>
     <b-container class="bv-example-row">
         <b-row align-v="center" class="justify-content-md-center">
+            
             <b-form >
+                <img src="/logo.png" alt="" style="width: 250px;">
                 <b-form-group
                     id="input-group-1"
                     label="Email"
