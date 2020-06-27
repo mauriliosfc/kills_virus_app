@@ -1,6 +1,6 @@
 <template>
     <div id='template'>
-        <sidebar-menu :menu="menu" />
+        <sidebar-menu :menu="menu" :collapsed="collapsed" />
         <router-view name="content" class="container"></router-view>
     </div>  
 </template>
@@ -9,17 +9,21 @@
 export default {
     data(){
     return {
+      collapsed: {
+        type: Boolean,
+        default: true
+      },
       menu: [
         {
           header: true,
           title: 'Menu',
-          hiddenOnCollapse: true
+          hiddenOnCollapse: false
         },
         {
           href: '/app',
           title: 'Home',
           icon: 'fa fa-home'
-        },
+        },        
         {
           title: 'Shoping',
           icon: 'fa fa-shopping-cart',
