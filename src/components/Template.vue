@@ -29,6 +29,10 @@ export default {
               title: 'Comprar'
             },
             {
+              href: '/cadastrarLoja',
+              title: 'Cadastrar Loja'
+            },
+            {
               href: '/vender',
               title: 'Vender'
             }

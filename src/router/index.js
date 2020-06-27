@@ -9,6 +9,7 @@ import Comprar from '../components/Comprar'
 import Consulta from '../components/Consulta'
 import Testes from '../components/Testes'
 import Vender from '../components/Vender'
+import CadastroLoja from '../components/CadastroLoja'
 Vue.use(VueRouter)
 
 const routes = [
@@ -42,7 +43,8 @@ const routes = [
       { path: '/comprar', name: 'adm-home', components: { content: Comprar }},
       { path: '/vender', name: 'adm-home', components: { content: Vender }},
       { path: '/testes', name: 'adm-home', components: { content: Testes }},
-      { path: '/consulta', name: 'adm-home', components: { content: Consulta }}
+      { path: '/consulta', name: 'adm-home', components: { content: Consulta }},
+      { path: '/cadastrarLoja', name: 'adm-home', components: { content: CadastroLoja }}
     ]
   }
 ]
