@@ -19,7 +19,7 @@ Vue.use(VueSidebarMenu)
 Vue.use(VueSession)
 
 Vue.prototype.$http = axios.create({
-  baseURL: 'http://127.0.0.1:3333',
+  baseURL: process.env.API_URL | 'http://ec2-18-231-74-164.sa-east-1.compute.amazonaws.com/',
   headers: { 'X-Custom-Header': 'foobar' }
 })
 
